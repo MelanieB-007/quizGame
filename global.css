@@ -18,9 +18,14 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 100px;  /* Platz für Header */
-    padding-bottom: 120px;  /* Platz für Nav */
-    font-weight: 400;
+    padding-bottom: 120px;  /* Platz für Navi */
     min-height: 100vh;
+}
+
+.text-font {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
 }
 
 header {
@@ -42,8 +47,6 @@ header h1 {
     font-weight: 700;
     color: var( --color-text-light);
     letter-spacing: 2px;
-    text-shadow: 0 2px 4px var(--color-shadow);
-
 }
 
 main {
@@ -51,10 +54,61 @@ main {
     padding: 2rem;
 }
 
-.question-box{
-    border: 3pt solid var(--color-border);
-    min-height: 300px;
+.question-box {
+    border: 2px solid var(--color-border);
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;  /* Zentriert */
+}
+
+p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.answer-label {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.button-show-answer {
+    display: inline-block;
+    width: auto;
+    padding: 0.75rem 1.5rem;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    border: none;
     border-radius: 8px;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    touch-action: manipulation;
+}
+
+button:active {
+    background-color: var(--color-primary-hover);
+    transform: scale(0.98);
+}
+
+.button-font {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-text-light);
 }
 
 nav {
@@ -67,7 +121,7 @@ nav {
     justify-content: center;
     gap: 1.5rem;
     background-color: var(--color-nav-bg);
-    padding: 2rem;
+    padding: 1.1rem;
 }
 
 nav a {
@@ -76,7 +130,6 @@ nav a {
     background-color: var(--color-primary);
     color: var( --color-text-light);
     text-decoration: none;
-    font-weight: 600;
     border-radius: 8px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px var(--color-shadow);
