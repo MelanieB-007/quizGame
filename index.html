@@ -13,36 +13,42 @@
 </head>
 
 <body>
-    <header>
-        <h1>QUIZ APP </h1>
+    <header class="header">
+        <h1 class="header__title">QUIZ APP </h1>
     </header>
-    <main>
-        <section class="question-box">
-            <img src="assets/bookmark-plus.png" class="bookmark" alt="add to bookmarks"/>
-            <p class="text-font">
+    <main class="main">
+        <section class="question__card" aria-labelledby="question-title">
+            <img src="assets/bookmark-plus.png" class="bookmark__image" alt="add to bookmarks"/>
+            <p class="question__text" id="question-title">
                 Which animal has spotted fur and laughs?
             </p>
 
-            <p class="text-font">
+            <p class="question__text">
                 <strong>Answer:</strong> Spotted hyena
             </p>
-            <div class="button-wrapper">
-                <button class="button-show-answer button-font" aria-label="Show correct answer">Show Answer</button>
+            <div class="button__wrapper">
+                <button class="button--show-answer button__text" aria-label="Show correct answer">Show Answer</button>
             </div>
 
-            <p class="answer-label text-font">Choose the correct answer:</p>
-            <div class="button-container">
-                <button class="button-font" aria-label="Answer: Axolotl">Axolotl</button>
-                <button class="button-font" aria-label="Answer: Panther">Panther</button>
-                <button class="button-font" aria-label="Answer: Spotted hyena">Spotted hyena</button>
-                <button class="button-font" aria-label="Answer: Lion">Lion</button>
+            <p class="answer__label question__text">Choose the correct answer:</p>
+            <div class="button__container">
+                <button class="button button__text" aria-label="Answer: Axolotl">Axolotl</button>
+                <button class="button button__text" aria-label="Answer: Panther">Panther</button>
+                <button class="button button__text" aria-label="Answer: Spotted hyena">Spotted hyena</button>
+                <button class="button button__text" aria-label="Answer: Lion">Lion</button>
             </div>
         </section>
     </main>
-    <nav aria-label="main navigation">
-        <a href="index.html" class="button-font" aria-label="Home">Home</a>
-        <a href="bookmarks.html" class="button-font" aria-label="Bookmarks">Bookmarks</a>
-        <a href="profile.html" class="button-font" aria-label="Profile">Profile</a>
+    <nav aria-label="main navigation" class="nav">
+        <a href="index.html" class="nav__link" aria-label="Home">
+            <img src="assets/home.png" class="nav__image" alt="go to home"/>
+        </a>
+        <a href="bookmarks.html" class="nav__link" aria-label="Bookmarks">
+            <img src="assets/bookmark-plus.png" class="nav__image__bookmark" alt="go to bookmarks"/>
+        </a>
+        <a href="profile.html" class="nav__link" aria-label="Profile">
+            <img src="assets/profile.png" class="nav__image" alt="go to profile"/>
+        </a>
     </nav>
 </body>
 </html>
