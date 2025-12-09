@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color-primary: #5b9ef5;        /* Header & Button */
+    --color-primary-hover: #4a8fe7;  /* Button Hover */
+    --color-nav-bg: #d4e5ff;         /* Nav Hintergrund */
+    --color-text-light: white;       /* Text auf Header */
+    --color-text-dark: #333;         /* Text auf Nav */
+    --color-border: #b3d9ff;         /* Border */
+    --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;  /* Platz für Header */
+    padding-bottom: 120px;  /* Platz für Nav */
+    font-weight: 400;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: var( --color-primary);
+    box-shadow: 0 4px 6px var(--color-shadow);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var( --color-text-light);
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px var(--color-shadow);
+
+}
+
+main {
+    flex: 1;  /* Nimmt verfügbaren Platz */
+    padding: 2rem;
+}
+
+.question-box{
+    border: 3pt solid var(--color-border);
+    min-height: 300px;
+    border-radius: 8px;
+}
+
+nav {
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:1;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--color-nav-bg);
+    padding: 2rem;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var( --color-text-light);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    cursor: pointer;  /* ← Zeigt, dass es klickbar ist */
+}
+
+nav a:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);  /* Leichter Hebeffekt */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a:active {
+    transform: translateY(0);  /* Zurück beim Klick */
+}
