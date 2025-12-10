@@ -17,15 +17,16 @@
     <h1 class="header__title">QUIZ APP </h1>
 </header>
 <main class="main">
+    <div class="profile__card">
     <!--Profile Section -->
     <section class="profile__section">
         <img src="assets/profilepicture.jpg" class="profile__image" alt="Profile picture">
-        <h2 class="profile__name">Melanie Busse</h2>
+        <h2>Melanie Busse</h2>
     </section>
 
 
     <!-- About Me Section -->
-    <section class="about__section">
+    <section>
         <h2 class="profile__headline">About me</h2>
         <p class="about__text">
             I am an avid quiz enthusiast and would like to share my knowledge with the community.
@@ -35,23 +36,24 @@
 
     <!-- Statistic -->
     <section class="stats__section">
-        <button class="stat__button" title="Created questions">
-            <img src="assets/nav__quizhome.png" alt="Created questions"/>
+        <div class="settings__item stats__item">
+            <img src="assets/nav__quizhome.png" class="stats__item__img" alt="Created questions"/>
             12
-        </button>
-        <button class="stat__button" title="Created bookmarks">
-            <img src="assets/bookmark_checked.png" alt="Bookmarks"/>
+        </div>
+        <div class="settings__item stats__item">
+            <img src="assets/bookmark_checked.png" class="stats__item__img" alt="Bookmarks"/>
             4
-        </button>
+        </div>
     </section>
 
     <section class="settings__section">
         <h2 class="profile__headline">Settings</h2>
         <div class="settings__item">
-            <label class="settings__label">Dark mode</label>
+            <label>Dark mode</label>
             <button class="toggle__switch" id="darkModeToggle" aria-label="Dark Mode Toggle"></button>
         </div>
     </section>
+    </div>
 </main>
 <nav aria-label="main navigation" class="nav">
     <a href="index.html" class="nav__link nav__link__notchecked" aria-label="Home">

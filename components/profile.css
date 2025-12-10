@@ -1,3 +1,14 @@
+.profile__card {
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 2px 8px var(--color-shadow);
+}
+
 .profile__section {
     display: flex;
     flex-direction: row;
@@ -19,26 +30,14 @@
     flex-shrink: 0;
 }
 
-.profile__name {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 0;
-}
-
 /* About Me Section */
-.about__section {
-    margin-bottom: 0;
-}
-
 .profile__headline{
     text-align: center;
     font-size: 16px;
-    font-weight: 600;
     margin-bottom: 12px;
     text-transform: uppercase;
 }
 .about__text {
-    font-size: 14px;
     line-height: 1.6;
     color: var(--color-text-dark);
     padding: 10px 0;
@@ -51,33 +50,17 @@
     margin-bottom: 30px;
 }
 
-.stat__button {
+.stats__item {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 10px;
     background-color: var(--color-nav-bg);
     border: 2px solid var(--color-border);
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600;
     font-size: 16px;
-    transition: all 0.3s ease;
 }
 
-body.dark-mode .stat__button {
-    background-color: var(--color-text-dark);
-    border-color: #444;
-}
-
-.stat__button:hover {
-    background-color: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
-}
-
-.stat__button img {
+.stats__item__img {
     width: 20px;
     height: 20px;
 }
@@ -86,11 +69,6 @@ body.dark-mode .stat__button {
 .settings__section {
     margin-top: 20px;
     margin-bottom: 30px;
-}
-
-.settings__label {
-    font-weight: 600;
-    font-size: 14px;
 }
 
 .settings__item {
