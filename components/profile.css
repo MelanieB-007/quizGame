@@ -1,3 +1,15 @@
+.profile__card {
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+
 .profile__section {
     display: flex;
     flex-direction: row;

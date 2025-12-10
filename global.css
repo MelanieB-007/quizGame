@@ -31,5 +31,5 @@ p {
 
 .main {
     flex: 1;  /* Nimmt verfügbaren Platz */
-    padding: 1rem;
+    padding: 1.5rem;
 }
