@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz App</title>
+
+    <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="32x32">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+</head>
+
+<body>
+<header class="header">
+    <h1 class="header__title">QUIZ APP </h1>
+</header>
+<main class="main">
+    <!--Profile Section -->
+    <section class="profile__section">
+        <img src="/assets/profilepicture.jpg" class="profile__image" alt="Profile picture">
+        <h2 class="profile__name">Melanie Busse</h2>
+    </section>
+
+
+    <!-- About Me Section -->
+    <section class="about__section">
+        <h2 class="profile__headline">About me</h2>
+        <p class="about__text">
+            I am an avid quiz enthusiast and would like to share my knowledge with the community.
+            I enjoy asking questions about different animal species.
+        </p>
+    </section>
+
+    <!-- Statistic -->
+    <section class="stats__section">
+        <button class="stat__button" title="Created questions">
+            <img src="/assets/nav__quizhome.png" alt="Created questions"/>
+            12
+        </button>
+        <button class="stat__button" title="Created bookmarks">
+            <img src="/assets/bookmark_checked.png" alt="Bookmarks"/>
+            4
+        </button>
+    </section>
+
+    <section class="settings__section">
+        <h2 class="profile__headline">Settings</h2>
+        <div class="settings__item">
+            <label class="settings__label">Dark mode</label>
+            <button class="toggle__switch" id="darkModeToggle" aria-label="Dark Mode Toggle"></button>
+        </div>
+    </section>
+</main>
+<nav aria-label="main navigation" class="nav">
+    <a href="index.html" class="nav__link nav__link__notchecked" aria-label="Home">
+        <img src="assets/nav__quizhome.png" class="nav__image" alt="go to home"/>
+    </a>
+    <a href="bookmarks.html" class="nav__link nav__link__notchecked" aria-label="Bookmarks">
+        <img src="assets/nav__bookmark.png" class="nav__image__bookmark" alt="go to bookmarks"/>
+    </a>
+    <a href="profile.html" class="nav__link nav__link__checked" aria-label="Profile">
+        <img src="assets/nav__profile.png" class="nav__image" alt="go to profile"/>
+    </a>
+</nav>
+</body>
+</html>
