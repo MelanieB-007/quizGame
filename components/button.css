@@ -1,0 +1,92 @@
+.button__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    touch-action: manipulation;
+}
+
+.button:active {
+    background-color: var(--color-primary-hover);
+    transform: scale(0.98);
+}
+
+.button__text {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+}
+
+.button__wrapper {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: left;
+}
+
+.button--show-answer {
+    display: inline-block;
+    width: auto;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button--show-answer:active {
+    background-color: var(--color-primary-hover);
+    transform: scale(0.98);
+}
+
+.bookmark__button {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 0;
+    transition: transform 0.3s ease;
+}
+
+.bookmark__button:hover {
+    transform: scale(1.1);
+}
+
+.bookmark__button:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.bookmark__image {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: opacity 0.3s ease;
+}
+
+.bookmark__image--visible {
+    opacity: 1;
+}
+
+.bookmark__image--hidden {
+    opacity: 0;
+    pointer-events: none;
+}

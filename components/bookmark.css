@@ -1,0 +1,13 @@
+.bookmark__image {
+    width: 50px;
+    height: 50px;
+    z-index: 0;
+}
+
+.bookmark__image--visible {
+    opacity: 1;
+}
+
+.bookmark__image--hidden {
+    opacity: 0;
+}
