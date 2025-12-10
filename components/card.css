@@ -25,15 +25,6 @@
     opacity: 0;
 }
 
-.question__area {
-    height: 60px;
-}
-
-.quizmaster__image {
-    width: 50px;
-    height: 80px;
-}
-
 .answer__label {
     margin-bottom: 1rem;
     margin-top: 1.5rem;

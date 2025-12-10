@@ -5,11 +5,11 @@
     right:0;
     z-index:1;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     background-color: var(--color-nav-bg);
     padding: 0.6rem;
-    flex-wrap: wrap;
 }
 
 .nav__link {
@@ -17,23 +17,23 @@
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
+    width: 50px;
+    height: 50px;
+    min-width: auto;
     border-radius: 12px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px var(--color-shadow);
-    cursor: pointer;  /* ← Zeigt, dass es klickbar ist */
-    width: 50px;  /* ← Fest 50px */
-    height: 50px;  /* ← Fest 50px */
-    min-width: auto;
+    cursor: pointer;
 }
 
 .nav__link:hover {
     background-color: var(--color-primary-hover);
-    transform: translateY(-2px);  /* Leichter Hebeffekt */
+    transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .nav__link:active {
-    transform: translateY(0);  /* Zurück beim Klick */
+    transform: translateY(0);
 }
 
 .nav__link:focus-visible {

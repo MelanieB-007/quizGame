@@ -6,30 +6,25 @@
 }
 
 :root {
-    --color-primary: #5b9ef5;        /* Header & Button */
-    --color-primary-hover: #4a8fe7;  /* Button Hover */
-    --color-nav-bg: #d4e5ff;         /* Nav Background */
-    --color-nav-bg-checked: #2e5fa8; /* Nav Background checked */
-    --color-text-light: white;       /* Text Header */
-    --color-text-dark: #333;         /* Text Nav */
-    --color-border: #b3d9ff;         /* Border */
+    --color-primary: #5b9ef5;           /* Header & Button */
+    --color-primary-hover: #4a8fe7;     /* Button Hover */
+    --color-nav-bg: #d4e5ff;            /* Nav Background */
+    --color-nav-bg-checked: #2e5fa8;    /* Nav Background checked */
+    --color-text-light: white;          /* Text Header */
+    --color-text-dark: #333;            /* Text Nav */
+    --color-border: #b3d9ff;            /* Border */
     --color-shadow: rgba(0, 0, 0, 0.1);
 }
 
 body {
     display: flex;
     flex-direction: column;
-    padding-top: 70px;  /* Platz für Header */
-    padding-bottom: 70px;  /* Platz für Navi */
+    padding-top: 70px;                  /* Platz für Header */
+    padding-bottom: 70px;               /* Platz für Navi */
     min-height: 100vh;
 }
 
-p {
-    margin-bottom: 1.5rem;
-    line-height: 1.5rem;
-}
-
 .main {
-    flex: 1;  /* Nimmt verfügbaren Platz */
+    flex: 1;
     padding: 1.5rem;
 }
