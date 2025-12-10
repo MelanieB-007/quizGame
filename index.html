@@ -17,19 +17,26 @@
         <h1 class="header__title">QUIZ APP </h1>
     </header>
     <main class="main">
-        <section class="question__card" aria-labelledby="question-title">
-            <img src="assets/bookmark-plus.png" class="bookmark__image" alt="add to bookmarks"/>
-            <p class="question__text" id="question-title">
-                Which animal has spotted fur and laughs?
-            </p>
-
-            <p class="question__text">
-                <strong>Answer:</strong> Spotted hyena
-            </p>
-            <div class="button__wrapper">
-                <button class="button--show-answer button__text" aria-label="Show correct answer">Show Answer</button>
+        <section class="question__card" aria-labelledby="question-title1">
+            <div class="question__area">
+                <button class="bookmark__button" aria-label="Toggle bookmark" aria-pressed="false">
+                    <img src="assets/bookmark_checked.png" class="bookmark__image bookmark__image--visible" alt="add to bookmarks"/>
+                    <img src="assets/bookmark_plus.png" class="bookmark__image bookmark__image--hidden" alt="add to bookmarks"/>
+                </button>
+                <p class="question__text" id="question-title1">
+                    Which animal has spotted fur and laughs?
+                </p>
             </div>
-
+                <p class="question__text question__answer--visible">
+                    <strong>Answer:</strong> Spotted hyena
+                </p>
+                <div class="button__wrapper">
+                    <button class="button--show-answer button__text" aria-label="Show correct answer">Show Answer</button>
+                </div>
+                <div>
+                    <img src="assets/animals/tuepfelhyaene.jpg" class=" question__image question__image--visible" alt="Spotted Hyena"/>
+                    <img src="assets/quizwindow.jpg" class="question__image .question__image--hidden" alt="window with question mark"/>
+                </div>
             <p class="answer__label question__text">Choose the correct answer:</p>
             <div class="button__container">
                 <button class="button button__text" aria-label="Answer: Axolotl">Axolotl</button>
@@ -38,16 +45,44 @@
                 <button class="button button__text" aria-label="Answer: Lion">Lion</button>
             </div>
         </section>
+        <section class="question__card" aria-labelledby="question-title2">
+            <div class="question__area">
+                <button class="bookmark__button" aria-label="Toggle bookmark" aria-pressed="false">
+                    <img src="assets/bookmark_checked.png" class="bookmark__image bookmark__image--visible" alt="add to bookmarks"/>
+                    <img src="assets/bookmark_plus.png" class="bookmark__image bookmark__image--hidden" alt="add to bookmarks"/>
+                </button>
+                <p class="question__text" id="question-title2">
+                    Which bird has a long neck and lives in wetlands?
+                </p>
+            </div>
+            <p class="question__text question__answer--hidden">
+                <strong>Answer:</strong> Swan
+            </p>
+            <div class="button__wrapper">
+                <button class="button--show-answer button__text" aria-label="Show correct answer">Show Answer</button>
+            </div>
+            <div>
+                <img src="assets/animals/tuepfelhyaene.jpg" class="question__image bookmark__image--hidden" alt="Spotted Hyena"/>
+                <img src="assets/quizwindow.jpg" class="question__image bookmark__image--visible" alt="window with question mark"/>
+            </div>
+            <p class="answer__label question__text">Choose the correct answer:</p>
+            <div class="button__container">
+                <button class="button button__text" aria-label="Answer: Swan">Swan</button>
+                <button class="button button__text" aria-label="Answer: Buzzard">Buzzard</button>
+                <button class="button button__text" aria-label="Answer: Barn owl">Barn owl</button>
+                <button class="button button__text" aria-label="Answer: Penguin">Penguin</button>
+            </div>
+        </section>
     </main>
     <nav aria-label="main navigation" class="nav">
-        <a href="index.html" class="nav__link" aria-label="Home">
-            <img src="assets/home.png" class="nav__image" alt="go to home"/>
+        <a href="index.html" class="nav__link nav__link__checked" aria-label="Home">
+            <img src="assets/nav__quizhome.png" class="nav__image" alt="go to home"/>
         </a>
-        <a href="bookmarks.html" class="nav__link" aria-label="Bookmarks">
-            <img src="assets/bookmark-plus.png" class="nav__image__bookmark" alt="go to bookmarks"/>
+        <a href="bookmarks.html" class="nav__link nav__link__notchecked" aria-label="Bookmarks">
+            <img src="assets/nav__bookmark.png" class="nav__image__bookmark" alt="go to bookmarks"/>
         </a>
-        <a href="profile.html" class="nav__link" aria-label="Profile">
-            <img src="assets/profile.png" class="nav__image" alt="go to profile"/>
+        <a href="profile.html" class="nav__link nav__link__notchecked" aria-label="Profile">
+            <img src="assets/nav__profile.png" class="nav__image" alt="go to profile"/>
         </a>
     </nav>
 </body>

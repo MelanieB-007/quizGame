@@ -1,0 +1,57 @@
+.question__card {
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.question__text {
+    font-weight: 600;
+    font-size: 1rem;
+    width: auto;
+    color: var(--color-text-dark);
+}
+
+.question__answer--visible {
+    opacity: 1;
+}
+
+.question__answer--hidden {
+    opacity: 0;
+}
+
+.question__area {
+    height: 60px;
+}
+
+.quizmaster__image {
+    width: 50px;
+    height: 80px;
+}
+
+.answer__label {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.question__image {
+    position: absolute;  /* ← Über dem Content */
+    top: 30px;  /* ← Halb über oben */
+    right: 20px;  /* ← Rechts außen */
+    width: 150px;  /* ← Größe anpassen */
+    height: 150px;
+    z-index: 1;  /* ← Liegt über anderen Elementen */
+}
+
+.question__image--visible {
+    opacity: 1;
+}
+
+.question__image--hidden {
+    opacity: 0;
+    pointer-events: none;
+}
