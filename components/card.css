@@ -15,6 +15,17 @@
     color: var(--color-text-dark);
 }
 
+.question__answer__text {
+    width: auto;
+    margin-top: 1rem;
+    max-width: calc(100% - 170px);
+    color: var(--color-text-dark);
+}
+
+.question__answer__label {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
 .question__answer--visible {
     opacity: 1;
 }
@@ -23,18 +34,14 @@
     opacity: 0;
 }
 
-.answer__label {
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-}
-
 .question__image {
-    position: absolute;  /* ← Über dem Content */
-    top: 30px;  /* ← Halb über oben */
-    right: 20px;  /* ← Rechts außen */
-    width: 150px;  /* ← Größe anpassen */
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 150px;
     height: 150px;
-    z-index: 1;  /* ← Liegt über anderen Elementen */
+    border: 2pt solid var(--color-primary);
+    border-radius: 12px;
 }
 
 .question__image--visible {

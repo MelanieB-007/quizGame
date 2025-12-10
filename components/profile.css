@@ -9,7 +9,6 @@
     box-shadow: 0 2px 8px var(--color-shadow);
 }
 
-
 .profile__section {
     display: flex;
     flex-direction: row;
@@ -31,15 +30,7 @@
     flex-shrink: 0;
 }
 
-.profile__name {
-    margin-bottom: 0;
-}
-
 /* About Me Section */
-.about__section {
-    margin-bottom: 0;
-}
-
 .profile__headline{
     text-align: center;
     font-size: 16px;
@@ -59,45 +50,12 @@
     margin-bottom: 30px;
 }
 
-.stat__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px;
-    background-color: var(--color-nav-bg);
-    border: 2px solid var(--color-border);
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-body.dark-mode .stat__button {
-    background-color: var(--color-text-dark);
-    border-color: #444;
-}
-
-.stat__button:hover {
-    background-color: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
-}
-
-.stat__button img {
-    width: 20px;
-    height: 20px;
-}
-
 /* Settings Section */
 .settings__section {
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
-.settings__label {
-    font-size: 14px;
-}
 
 .settings__item {
     display: flex;
