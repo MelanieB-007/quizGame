@@ -22,7 +22,6 @@
 }
 
 .button__text {
-    font-weight: 600;
     font-size: 0.8rem;
     color: var(--color-text-light);
 }

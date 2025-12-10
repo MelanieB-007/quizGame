@@ -10,8 +10,6 @@
 }
 
 .question__text {
-    font-weight: 600;
-    font-size: 1rem;
     width: auto;
     max-width: calc(100% - 170px);
     color: var(--color-text-dark);

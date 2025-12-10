@@ -32,8 +32,6 @@
 }
 
 .profile__name {
-    font-size: 20px;
-    font-weight: 600;
     margin-bottom: 0;
 }
 
@@ -45,12 +43,10 @@
 .profile__headline{
     text-align: center;
     font-size: 16px;
-    font-weight: 600;
     margin-bottom: 12px;
     text-transform: uppercase;
 }
 .about__text {
-    font-size: 14px;
     line-height: 1.6;
     color: var(--color-text-dark);
     padding: 10px 0;
@@ -73,7 +69,6 @@
     border: 2px solid var(--color-border);
     border-radius: 10px;
     cursor: pointer;
-    font-weight: 600;
     font-size: 16px;
     transition: all 0.3s ease;
 }
@@ -101,7 +96,6 @@ body.dark-mode .stat__button {
 }
 
 .settings__label {
-    font-weight: 600;
     font-size: 14px;
 }
 
