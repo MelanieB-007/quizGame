@@ -1,9 +1,33 @@
-Recap Project 1: Quiz App - Layout
-In this project you will build the layout of your first mobile web application, a quiz app. In later projects we will expand this app and add all sorts of cool functionality.
+# Quiz App – Project 1: Layout
 
-Overview
-In this project we will have 3 pages:
+This project is the first step in building our own mobile quiz web application.  
+In this stage, you focus entirely on the layout, while functionality will be added in later projects.
 
-Home page: Here, you’ll have access to view all questions available on the platform.
-Bookmark page: This is a dedicated space where you can exclusively view the questions you’ve bookmarked, similar to the ones marked on the home page.
-Profile page: This section allows you to view and manage your profile and settings.
+## Overview
+
+The app consists of three main pages:
+
+- **Home Page**  
+  The home page displays all questions available on the platform.  
+  Users can scroll through the list of quiz cards to explore the full question pool.
+
+- **Bookmark Page**  
+  The bookmark page shows only the questions that have been bookmarked.  
+  It works like a favorites list, allowing quick access to saved questions.
+
+- **Profile Page**  
+  The profile page lets users view and manage their profile information and settings.  
+  This area will be extended with additional features in later steps of the project.
+
+## Project Goals
+
+- Build a responsive layout for a mobile web application
+- Define the basic structure of all three pages using semantic HTML
+- Style the interface with modern layout techniques (e.g. Flexbox, CSS Grid)
+- Create a consistent design for cards, buttons, navigation, and headers
+
+## Technologies Used
+
+- **HTML5** for the structure of the pages
+- **CSS3** for layout, styling, and responsiveness
+- **Mobile‑first** design approach to optimize the experience on smartphones
