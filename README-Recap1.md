@@ -10,9 +10,9 @@ In diesem Projekt werden wir 3 Seiten haben:
 - **Bookmarks-Seite:** Dies ist ein eigener Bereich, in dem du ausschließlich die von dir mit einem Lesezeichen versehenen Fragen sehen kannst, ähnlich denen, die auf der Home-Seite markiert sind.
 - **Profil-Seite:** In diesem Bereich kannst du dein Profil und deine Einstellungen ansehen und verwalten.
 
-Nutze diese [Themenideen](./wireframes/topics.md) für deine Quiz App oder wähle eigene Themen, vermeide aber Platzhaltertexte.
+Nutze diese [Themenideen](assets/wireframes/topics.md) für deine Quiz App oder wähle eigene Themen, vermeide aber Platzhaltertexte.
 
-![](./wireframes/overview.png)
+![](assets/wireframes/overview.png)
 
 ## Setup
 
@@ -41,7 +41,7 @@ Wie du bereits aus früheren Aufgaben weißt, wollen wir als Entwickler:innen im
 
 Erstelle folgendes Layout:
 
-![](./wireframes/homepage.png)
+![](assets/wireframes/homepage.png)
 
 - Starte mit dem Feature „Titel“ auf einem neuen Feature-Branch und erstelle den App-Titel.
 - Wenn du fertig bist, verwende den Feature-Branch-Workflow, um deine Ergebnisse in den `main`-Branch zu mergen.
@@ -55,7 +55,7 @@ Erstelle folgendes Layout:
 
 ### 2. Bookmarks-Seite
 
-![](./wireframes/bookmarkpage.png)
+![](assets/wireframes/bookmarkpage.png)
 
 Die zweite Seite ist die Bookmarks-Seite.
 
@@ -69,7 +69,7 @@ Die zweite Seite ist die Bookmarks-Seite.
 
 ### Profil-Seite
 
-![](./wireframes/profilepage.png)
+![](assets/wireframes/profilepage.png)
 
 Erstelle die Profil-Seite auf dieselbe Weise, wie du die anderen beiden Seiten erstellt hast.
 
@@ -125,9 +125,9 @@ In this project we will have 3 pages:
 - **Bookmark page:** This is a dedicated space where you can exclusively view the questions you’ve bookmarked, similar to the ones marked on the home page.
 - **Profile page:** This section allows you to view and manage your profile and settings.
 
-Explore [these topic](./wireframes/topics.md) ideas for your quiz app or choose your own, avoiding placeholder text.
+Explore [these topic](assets/wireframes/topics.md) ideas for your quiz app or choose your own, avoiding placeholder text.
 
-![Quiz App Overview](./wireframes/overview.png)
+![Quiz App Overview](assets/wireframes/overview.png)
 
 ## Setup
 
@@ -158,7 +158,7 @@ why the first step to success is to start with the homepage.
 
 - Create the following layout:
 
-![homepage](./wireframes/homepage.png)
+![homepage](assets/wireframes/homepage.png)
 
 - Start with the feature 'title' on a fresh feature branch and create the app title.
 
@@ -178,7 +178,7 @@ might want to look up the "hidden" attribute.)
 
 ### 2. Bookmarks Page
 
-![homepage](./wireframes/bookmarkpage.png)
+![homepage](assets/wireframes/bookmarkpage.png)
 
 The second page is the bookmarks page.
 
@@ -192,7 +192,7 @@ The second page is the bookmarks page.
 
 ### Profile Page
 
-![profilePage](./wireframes/profilepage.png)
+![profilePage](assets/wireframes/profilepage.png)
 
 Create the profile page in the same way you created the other two pages.
 
