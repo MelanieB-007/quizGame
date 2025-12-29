@@ -28,12 +28,13 @@ function createButton(
 
 function createImage(
     {icon = "", alt = "", classList= []} = {}){
-    const imageBookmark = document.createElement("img");
-    imageBookmark.classList.add(...classList);
-    imageBookmark.src = `./assets/${icon}`;
-    imageBookmark.alt = alt;
+    const image = document.createElement("img");
+    image.classList.add(...classList);
+    image.src = `./assets/${icon}`;
+    image.alt = alt;
+    image.setAttribute("title", alt);
 
-    return imageBookmark;
+    return image;
 }
 
 function createParagraph(
