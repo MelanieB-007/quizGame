@@ -1,7 +1,6 @@
 function createCard(card) {
     const answer = "<strong>Answer:</strong> " + card.answer;
 
-
     const main = document.querySelector("main");
     const section = createSection({
         classList: ["question__card"],

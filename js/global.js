@@ -45,3 +45,13 @@ function createParagraph(
 
     return paragraph;
 }
+
+function createA(
+    {hrefAElement, classListAElement, arialLabel} = {}) {
+    const href = document.createElement("a");
+    href.href = hrefAElement;
+    href.classList.add(...classListAElement);
+    href.setAttribute("aria-label", arialLabel);
+
+    return href;
+}

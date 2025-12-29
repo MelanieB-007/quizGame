@@ -84,3 +84,25 @@ const questions = [
         bookmarked: false,
     },
 ];
+
+const nav = [
+    {
+        href: "index.html",
+        ariaLabel: "Home",
+        image: "icons/nav__quizhome.png",
+        alt: "go to home"
+    },
+    {
+        href: "bookmarks.html",
+        ariaLabel: "Bookmarks",
+        image: "icons/nav__bookmark.png",
+        alt: "go to bookmarks"
+    },
+    {
+        href: "profile.html",
+        ariaLabel: "Profile",
+        image: "icons/nav__profile.png",
+        alt: "go to profile"
+    }
+];
+
