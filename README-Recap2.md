@@ -77,7 +77,7 @@ Die folgenden Akzeptanzkriterien sollten für den Antwort-Button erfüllt sein:
 
 Benutzer sollten in der Lage sein, neue Karten zu deiner Quiz App hinzuzufügen. Der erste Schritt ist, eine Seite mit einem Formular zu erstellen.
 
-![Quiz App Formular](./wireframes/quiz-app-form-page.png)
+![Quiz App Formular](assets/wireframes/quiz-app-form-page.png)
 
 - Erstelle ein neues HTML-Dokument mit dem Namen `form.html`.
 - Füge die Seite der Navigation deiner Quiz App hinzu.
@@ -110,7 +110,7 @@ Die im Formular eingegebenen Daten sollten verwendet werden, um eine neue Fragek
 
 Die Formularfelder für Frage und Antwort sollten auf **150 Zeichen** begrenzt sein. Während der Eingabe soll der Benutzer Informationen über die verbleibende Zeichenanzahl erhalten.
 
-![Quiz App Formular mit Zeichenanzeige](./wireframes/quiz-app-form-page-with-counter.png)
+![Quiz App Formular mit Zeichenanzeige](assets/wireframes/quiz-app-form-page-with-counter.png)
 
 
 - Füge das Attribut `maxlength` zu den Formularfeldern hinzu.
@@ -132,11 +132,7 @@ Die Formularfelder für Frage und Antwort sollten auf **150 Zeichen** begrenzt s
    > ❗️ Diese Funktion sollte **nur auf der Profilseite** funktionieren.  
    > Später im Kurs wirst du lernen, wie man den Dark-/Light-Mode auf die gesamte Anwendung überträgt.
 
-
-
-
-
-
+   
 
 # Recap Project 2: Quiz App - Interactivity
 
@@ -228,7 +224,7 @@ The following acceptance criteria should be met for the answer button:
 
 Users should be able to add new cards to your Quiz App. The first step is to add a page with a form.
 
-![Quiz App form](./wireframes/quiz-app-form-page.png)
+![Quiz App form](assets/wireframes/quiz-app-form-page.png)
 
 - Create a new HTML document called `form.html`
 - Add the page to the navigation of your Quiz App
@@ -263,7 +259,7 @@ displayed as a **card** like the other questions.
 The form fields for question and answer should be limited to a text of 150 characters. While typing
 users should be informed about the amount of characters left.
 
-![Quiz App form with counter](./wireframes/quiz-app-form-page-with-counter.png)
+![Quiz App form with counter](assets/wireframes/quiz-app-form-page-with-counter.png)
 
 - Add a `maxlength` attribute to the form fields
 - Add a display below the form fields to show the amount of characters
