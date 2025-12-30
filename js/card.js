@@ -70,6 +70,9 @@ document.addEventListener("click", (event) => {
                 if(button.textContent.trim() === correctAnswer){
                     button.classList.remove("button--correct");
                     showButton.textContent = "Show answer";
+                } else {
+                    button.classList.remove("button--selected", "button--correct", "button--notCorrect");
+                    button.style.opacity = '1';
                 }
             });
             showButton.dataset.visible = "false";
