@@ -1,9 +1,9 @@
 .quiz__card {
-    max-width: 500px;
+    max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
     background: #fff;
-    border-radius: 0.5rem;
+    border-radius: 12px;
     box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
     border: 2px solid var(--color-border);
 }
@@ -16,6 +16,9 @@
 
 .quiz__card__fieldset {
     padding: 10px;
+    border-radius: 12px;
+    color: var(--color-primary);
+    border: 2px solid var(--color-border);
 }
 
 .form-group {

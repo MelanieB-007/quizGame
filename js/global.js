@@ -42,7 +42,7 @@ function createParagraph(
     {text, classList = [], id = ""} = {}) {
     const paragraph = document.createElement("p");
     paragraph.classList.add(...classList);
-    if (paragraph)  paragraph.id = id;
+    if (paragraph) paragraph.id = id;
     paragraph.innerHTML = text;
 
     return paragraph;
