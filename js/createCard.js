@@ -3,6 +3,7 @@ for (const navLink of nav) {
 }
 
 const form = document.querySelector(('[data-js="form"]'));
+form.reset();
 
 form.addEventListener("submit", (event) => {
    event.preventDefault();
