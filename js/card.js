@@ -35,30 +35,26 @@ function createDivQuestionArea(question, classList, bookmarked){
 
     const button = createButton({
         classList: ["button", "button__bookmark"],
-        ariaLabel: "Toggle bookmark"
+        ariaLabel: "Toggle bookmark",
+        dataJs: "button__bookmark"
     });
 
-    let classList1;
-    let classList2;
+    let icon;
+    let alt;
 
     if (bookmarked){
-        classList1 = ["bookmark__image", "bookmark__image--visible"];
-        classList2 = ["bookmark__image", "bookmark__image--hidden"];
+        button.setAttribute("data-bookmarked", "");
+        icon = "icons/bookmark_checked.png";
+        alt = "bookmark checked";
     } else {
-        classList1 = ["bookmark__image", "bookmark__image--hidden"];
-        classList2 = ["bookmark__image", "bookmark__image--visible"];
+        icon = "icons/bookmark_plus.png";
+        alt = "add to bookmarks";
     }
 
     button.appendChild(createImage({
-        icon: "icons/bookmark_checked.png",
-        alt: "bookmarks checked",
-        classList: classList1
-    }));
-
-    button.appendChild(createImage({
-        icon: "icons/bookmark_plus.png",
-        alt: "add to bookmarks",
-        classList: classList2
+        icon: icon,
+        alt: alt,
+        classList: ["bookmark__image"]
     }));
 
     div.appendChild(button);
