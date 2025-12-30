@@ -99,16 +99,16 @@ const nav = [
         alt: "go to bookmarks"
     },
     {
-        href: "profile.html",
-        ariaLabel: "Profile",
-        image: "icons/nav__profile.png",
-        alt: "go to profile"
-    },
-    {
         href: "createCard.html",
         ariaLabel: "Create new card",
         image: "icons/createCard.png",
         alt: "create new card"
+    },
+    {
+        href: "profile.html",
+        ariaLabel: "Profile",
+        image: "icons/nav__profile.png",
+        alt: "go to profile"
     }
 ];
 
