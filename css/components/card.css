@@ -57,3 +57,10 @@
     align-items: center;
     margin-top: 20px;
 }
+
+.quiz-card__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
