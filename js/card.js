@@ -14,6 +14,25 @@ document.addEventListener("click", (event) => {
             : "add to bookmarks";
     }
 
+    if(event.target.closest('[data-js="buttonAnswers"]')){
+        const selectedButton = event.target.closest('[data-js="buttonAnswers"]');
+
+        if(selectedButton) {
+            selectedButton.classList.add("button--selected");
+            selectedButton.disabled = true;
+
+            const card = selectedButton.closest('.question__card');
+            const allAnswerButtons = card.querySelectorAll('[data-js="buttonAnswers"]');
+
+            allAnswerButtons.forEach(button => {
+                if(button !== selectedButton){
+                    button.disabled = true;
+                    button.style.opacity = '0.6';
+                }
+            });
+        }
+    }
+
 
     if(event.target.closest('[data-js="showAnswer"]')){
         const showButton = event.target.closest('[data-js="showAnswer"]');
@@ -29,12 +48,22 @@ document.addEventListener("click", (event) => {
         const isVisible = showButton.dataset.visible ==="true";
 
         if(!isVisible) {
+            const selectedButton = card.querySelector('.button--selected');
+
             answerButtons.forEach((button) => {
                 if(button.textContent.trim() === correctAnswer){
+                    button.classList.remove("button--selected", "button--correct", "button--notCorrect");
                     button.classList.add("button--correct");
+                    button.style.opacity = '1';
                     showButton.textContent = "Hide answer";
+                } else {
+                    if(button === selectedButton){
+                        button.classList.remove("button--selected", "button--correct", "button--notCorrect");
+                        button.classList.add("button--notCorrect");
+                    }
                 }
             });
+
             showButton.dataset.visible = "true";
         } else {
             answerButtons.forEach((button) => {
@@ -130,6 +159,7 @@ function createButtonAnswers(card){
         ariaLabel: "Answer: " + card.possibleAnswers[0],
         dataJs: "buttonAnswers"
     });
+
     divButtonRow1.appendChild(button1Left);
 
     const button1Right = createButton({
