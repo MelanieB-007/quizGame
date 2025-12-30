@@ -91,7 +91,7 @@ function createButtonAnswers(card){
 
     const button1Left = createButton({
         text: card.possibleAnswers[0],
-        classList: ["button", "button--show-answer", "button__text"],
+        classList: ["button", "button__text"],
         ariaLabel: "Answer: " + card.possibleAnswers[0],
         dataJs: "button1Left"
     });
@@ -99,7 +99,7 @@ function createButtonAnswers(card){
 
     const button1Right = createButton({
         text: card.possibleAnswers[1],
-        classList: ["button", "button--show-answer", "button__text"],
+        classList: ["button", "button__text"],
         ariaLabel: "Answer: " + card.possibleAnswers[1],
         dataJs: "button1Right"
     });
@@ -112,7 +112,7 @@ function createButtonAnswers(card){
 
     const button2Left = createButton({
         text: card.possibleAnswers[2],
-        classList: ["button", "button--show-answer", "button__text"],
+        classList: ["button", "button__text"],
         ariaLabel: "Answer: " + card.possibleAnswers[2],
         dataJs: "button2Left"
     });
@@ -120,7 +120,7 @@ function createButtonAnswers(card){
 
     const button2Right = createButton({
         text: card.possibleAnswers[3],
-        classList: ["button", "button--show-answer", "button__text"],
+        classList: ["button", "button__text"],
         ariaLabel: "Answer: " + card.possibleAnswers[3],
         dataJs: "button2Right"
     });
@@ -133,7 +133,7 @@ function createButtonAnswers(card){
 
     const button3 = createButton({
         text: "Show Answer",
-        classList: ["button", "button--show-answer", "button__text"],
+        classList: ["button", "button__text"],
         ariaLabel: "Show answer",
         dataJs: "showAnswer"
     });
