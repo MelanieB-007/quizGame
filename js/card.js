@@ -13,6 +13,39 @@ document.addEventListener("click", (event) => {
             ? "bookmark checked"
             : "add to bookmarks";
     }
+
+
+    if(event.target.closest('[data-js="showAnswer"]')){
+        const showButton = event.target.closest('[data-js="showAnswer"]');
+
+        const card = showButton.closest('.question__card');
+
+        const correctAnswer = card.dataset.correctAnswer;
+
+        const answerButtons = card.querySelectorAll(
+            '[data-js="buttonAnswers"]'
+        );
+
+        const isVisible = showButton.dataset.visible ==="true";
+
+        if(!isVisible) {
+            answerButtons.forEach((button) => {
+                if(button.textContent.trim() === correctAnswer){
+                    button.classList.add("button--correct");
+                    showButton.textContent = "Hide answer";
+                }
+            });
+            showButton.dataset.visible = "true";
+        } else {
+            answerButtons.forEach((button) => {
+                if(button.textContent.trim() === correctAnswer){
+                    button.classList.remove("button--correct");
+                    showButton.textContent = "Show answer";
+                }
+            });
+            showButton.dataset.visible = "false";
+        }
+    }
 })
 
 function createCard(card) {
@@ -21,6 +54,8 @@ function createCard(card) {
         classList: ["question__card"],
         ariaLabeledBy: card.id
     });
+
+    section.setAttribute("data-correct-answer", card.answer);
     main.appendChild(section);
 
     section.appendChild(
@@ -93,7 +128,7 @@ function createButtonAnswers(card){
         text: card.possibleAnswers[0],
         classList: ["button", "button__text"],
         ariaLabel: "Answer: " + card.possibleAnswers[0],
-        dataJs: "button1Left"
+        dataJs: "buttonAnswers"
     });
     divButtonRow1.appendChild(button1Left);
 
@@ -101,7 +136,7 @@ function createButtonAnswers(card){
         text: card.possibleAnswers[1],
         classList: ["button", "button__text"],
         ariaLabel: "Answer: " + card.possibleAnswers[1],
-        dataJs: "button1Right"
+        dataJs: "buttonAnswers"
     });
     divButtonRow1.appendChild(button1Right);
 
@@ -114,7 +149,7 @@ function createButtonAnswers(card){
         text: card.possibleAnswers[2],
         classList: ["button", "button__text"],
         ariaLabel: "Answer: " + card.possibleAnswers[2],
-        dataJs: "button2Left"
+        dataJs: "buttonAnswers"
     });
     divButtonRow2.appendChild(button2Left);
 
@@ -122,7 +157,7 @@ function createButtonAnswers(card){
         text: card.possibleAnswers[3],
         classList: ["button", "button__text"],
         ariaLabel: "Answer: " + card.possibleAnswers[3],
-        dataJs: "button2Right"
+        dataJs: "buttonAnswers"
     });
     divButtonRow2.appendChild(button2Right);
 

@@ -44,3 +44,10 @@
     justify-content: left;
 }
 
+.button--correct {
+    background-color: darkgreen;
+}
+
+.button--notCorrect {
+    background-color: darkred;
+}
