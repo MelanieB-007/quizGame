@@ -17,11 +17,12 @@ function createDiv(
 }
 
 function createButton(
-    {text = "", classList = [], ariaLabel = ""} = {}){
+    {text = "", classList = [], ariaLabel = "", dataJs = ""} = {}){
     const button = document.createElement("button");
 
     button.classList.add(...classList);
     if (ariaLabel) button.setAttribute("aria-label", ariaLabel);
+    if (dataJs) button.setAttribute("data-js", dataJs);
     button.textContent = text;
     return button;
 }
