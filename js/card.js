@@ -16,8 +16,6 @@ document.addEventListener("click", (event) => {
 })
 
 function createCard(card) {
-    const answer = "<strong>Answer:</strong> " + card.answer;
-
     const main = document.querySelector("main");
     const section = createSection({
         classList: ["question__card"],
@@ -25,29 +23,31 @@ function createCard(card) {
     });
     main.appendChild(section);
 
-    section.appendChild(createDivQuestionArea(
-        card.question, ["question__area"], card.bookmarked));
+    section.appendChild(
+        createDivBookmark(["question__area"], card.bookmarked));
 
-    section.appendChild(createParagraph({
-        text: answer,
-        classList: ["question__answer__text", "question__answer--visible"]
+    const divContent = createDiv({
+        classList: ["question__content"]
+    });
+    section.appendChild(divContent);
+
+    divContent.appendChild(
+        createParagraph({
+            text: card.question,
+            classList: ["question__text"]
     }));
 
-    section.appendChild(createDivShowButton(["button__wrapper"]));
+    divContent.appendChild(createButtonAnswers(card));
 
-    section.appendChild(createDivImages(card.imageAnswer, card.answer));
-
-    section.appendChild(createParagraph({
-        text: "Choose the correct answer:",
-        classList: ["question__answer__label", "question__text"]
-}));
-
-    section.appendChild(createDivButtonContainerAnswers(
-        card.possibleAnswers, ["button__container"]));
-
+    section.appendChild(
+        createImage({
+            icon: card.imageAnswer ? card.imageAnswer : "images/quizwindow.jpg",
+            alt: card.answer,
+            classList: ["question__image"]
+    }));
 }
 
-function createDivQuestionArea(question, classList, bookmarked){
+function createDivBookmark(classList, bookmarked){
     const div = createDiv({classList:classList});
 
     const button = createButton({
@@ -76,58 +76,68 @@ function createDivQuestionArea(question, classList, bookmarked){
 
     div.appendChild(button);
 
-    div.appendChild(createParagraph({
-        text: question,
-        classList: ["question__text"],
-        id: "question-title1"
-    }));
-
     return div;
 }
 
-function createDivShowButton (classList){
-    const div = createDiv ({classList: classList});
+function createButtonAnswers(card){
+    const divButtons = createDiv({
+        classList: ["question__buttons"]
+    });
 
-    div.appendChild(createButton({
-        ariaLabel: "Show correct answer",
+    const divButtonRow1 = createDiv({
+        classList: ["question__buttons-row"]
+    });
+    divButtons.appendChild(divButtonRow1);
+
+    const button1Left = createButton({
+        text: card.possibleAnswers[0],
         classList: ["button", "button--show-answer", "button__text"],
-        text: "Show Answer"
-}));
+        ariaLabel: "Answer: " + card.possibleAnswers[0],
+        dataJs: "button1Left"
+    });
+    divButtonRow1.appendChild(button1Left);
 
-    return div;
-}
+    const button1Right = createButton({
+        text: card.possibleAnswers[1],
+        classList: ["button", "button--show-answer", "button__text"],
+        ariaLabel: "Answer: " + card.possibleAnswers[1],
+        dataJs: "button1Right"
+    });
+    divButtonRow1.appendChild(button1Right);
 
-function createDivImages(imageAnswer, altText){
-    const div = createDiv ();
-    console.log(imageAnswer);
-    if(!imageAnswer){
-        imageAnswer = "images/quizwindow.jpg";
-    }
+    const divButtonRow2 = createDiv({
+        classList: ["question__buttons-row"]
+    });
+    divButtons.appendChild(divButtonRow2);
 
-    div.appendChild(createImage({
-        icon: imageAnswer,
-        alt: altText,
-        classList: ["question__image", "question__image--visible"]
-    }));
+    const button2Left = createButton({
+        text: card.possibleAnswers[2],
+        classList: ["button", "button--show-answer", "button__text"],
+        ariaLabel: "Answer: " + card.possibleAnswers[2],
+        dataJs: "button2Left"
+    });
+    divButtonRow2.appendChild(button2Left);
 
-    div.appendChild(createImage({
-        icon: "images/quizwindow.jpg",
-        alt: "window with question mark",
-        classList: ["question__image", "question__image--hidden"]
-    }));
+    const button2Right = createButton({
+        text: card.possibleAnswers[3],
+        classList: ["button", "button--show-answer", "button__text"],
+        ariaLabel: "Answer: " + card.possibleAnswers[3],
+        dataJs: "button2Right"
+    });
+    divButtonRow2.appendChild(button2Right);
 
-    return div;
-}
+    const divButtonRow3 = createDiv({
+        classList: ["question__buttons-row"]
+    });
+    divButtons.appendChild(divButtonRow3);
 
-function createDivButtonContainerAnswers(possibleAnswers, classList){
-    const div = createDiv({classList: classList});
+    const button3 = createButton({
+        text: "Show Answer",
+        classList: ["button", "button--show-answer", "button__text"],
+        ariaLabel: "Show answer",
+        dataJs: "showAnswer"
+    });
+    divButtonRow3.appendChild(button3);
 
-    for (const text of possibleAnswers) {
-        div.appendChild(createButton({
-            text: text,
-            classList: ["button", "button--answer", "button__text"],
-            ariaLabel: "Answer: " + text
-        }));
-    }
-    return div;
+    return divButtons;
 }

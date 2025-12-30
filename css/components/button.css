@@ -37,7 +37,6 @@
 
 .button--show-answer {
     display: inline-block;
-    margin-top: 1rem;
     color: var(--color-text-light);
 }
 
