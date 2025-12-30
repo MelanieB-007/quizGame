@@ -52,6 +52,18 @@
     opacity: 1;
 }
 
-.divAnswers {
-    padding-bottom: 20px;
+.characters--left{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+    font-weight: 500;
+    color: #22c55e;
+    margin-top: 4px;
+    padding: 2px 8px;
+    min-height: 18px;
+    transition: color 0.2s ease;
+}
+
+.characters--left:empty::before {
+    content: "150 characters left";
 }
