@@ -26,36 +26,109 @@
     <div class="quiz__card">
         <form class="quiz__card__form">
             <div class="form-group">
-                <label for="question" class="form-label">Question:</label>
-                <input id="question" type="text" class="form-control" placeholder="Insert your question ..." required>
+                <label
+                        for="question"
+                        class="form-label">
+                    Question:
+                </label>
+                <input
+                        id="question"
+                        data-js="question"
+                        type="text"
+                        class="form-control"
+                        placeholder="Insert your question ..."
+                        required />
             </div>
 
             <div class="form-group">
-                <label for="answer" class="form-label">Answer:</label>
-                <input id="answer" type="text" class="form-control" placeholder="Insert your answer ..." required>
+                <label
+                        for="answer"
+                        class="form-label">
+                    Answer:
+                </label>
+                <input
+                        id="answer"
+                        data-js="question"
+                        type="text"
+                        class="form-control"
+                        placeholder="Insert your answer ..."
+                        required />
             </div>
 
-            <p>Possible answers:</p>
-            <div class="form-group">
-                <label for="possibleAnswer1" class="form-label">First animal:</label>
-                <input id="possibleAnswer1" type="text" class="form-control" placeholder="Insert your first animal ..." required>
-            </div>
-            <div class="form-group">
-                <label for="possibleAnswer2" class="form-label">Second animal:</label>
-                <input id="possibleAnswer2" type="text" class="form-control" placeholder="Insert your second animal ..." required>
-            </div>
-            <div class="form-group">
-                <label for="possibleAnswer3" class="form-label">Third animal:</label>
-                <input id="possibleAnswer3" type="text" class="form-control" placeholder="Insert your third animal ..." required>
-            </div>
-            <div class="form-group">
-                <label for="possibleAnswer4" class="form-label">Forth animal:</label>
-                <input id="possibleAnswer4" type="text" class="form-control" placeholder="Insert your forth animal ..." required>
-            </div>
-            <div class="button__container">
-                <button type="submit" class="button button--show-answer button__text">Submit</button>
-                <button type="reset" class="button button--show-answer button__text">Reset</button>
-            </div>
+            <fieldset class="quiz__card__fieldset">
+                <legend>
+                    Possible answers:
+                </legend>
+
+                <div class="form-group divAnswers">
+                    <label
+                            for="possibleAnswer1"
+                            class="form-label">
+                        First animal:
+                    </label>
+                    <input
+                            id="possibleAnswer1"
+                            data-js="possibleAnswer1"
+                            type="text"
+                            class="form-control"
+                            placeholder="Insert your first animal ..."
+                            required />
+                </div>
+                <div class="form-group divAnswers">
+                    <label
+                            for="possibleAnswer2"
+                            class="form-label">
+                        Second animal:
+                    </label>
+                    <input
+                            id="possibleAnswer2"
+                            data-js="possibleAnswer2"
+                            type="text"
+                            class="form-control"
+                            placeholder="Insert your second animal ..."
+                            required />
+                </div>
+                <div class="form-group divAnswers">
+                    <label
+                            for="possibleAnswer3"
+                            class="form-label">
+                        Third animal:
+                    </label>
+                    <input
+                            id="possibleAnswer3"
+                            data-js="possibleAnswer3"
+                            type="text"
+                            class="form-control"
+                            placeholder="Insert your third animal ..."
+                            required />
+                </div>
+                <div class="form-group">
+                    <label
+                            for="possibleAnswer4"
+                            class="form-label">
+                        Forth animal:
+                    </label>
+                    <input
+                            id="possibleAnswer4"
+                            data-js="possibleAnswer4"
+                            type="text"
+                            class="form-control"
+                            placeholder="Insert your forth animal ..."
+                            required />
+                </div>
+                <div class="button__container">
+                    <button
+                            type="submit"
+                            class="button button--show-answer button__text">
+                        Submit
+                    </button>
+                    <button
+                            type="reset"
+                            class="button button--show-answer button__text">
+                        Reset
+                    </button>
+                </div>
+            </fieldset>
         </form>
     </div>
 
