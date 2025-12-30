@@ -17,7 +17,7 @@
         <script src="./js/profile.js" defer></script>
     </head>
 
-    <body>
+    <body data-js="body">
         <header class="header">
             <h1 class="header__title">QUIZ APP </h1>
         </header>
@@ -55,7 +55,11 @@
                     <h2 class="profile__headline">Settings</h2>
                     <div class="settings__item">
                         <label>Dark mode</label>
-                        <button class="toggle__switch" id="darkModeToggle" aria-label="Dark Mode Toggle"></button>
+                        <button
+                                class="toggle__switch"
+                                id="darkModeToggle"
+                                data-js="toggle-button"
+                                aria-label="Dark Mode Toggle"></button>
                     </div>
                 </section>
             </div>

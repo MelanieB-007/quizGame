@@ -26,6 +26,11 @@ body {
     min-height: 100vh;
 }
 
+body.dark {
+    background-color: var(--color-text-dark);
+    color: var(--color-text-dark);
+}
+
 .main {
     flex: 1;
     padding: 1.5rem;
