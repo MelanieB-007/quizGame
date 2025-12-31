@@ -1,5 +1,6 @@
-.profile__card {
-    border: 2px solid var(--color-border);
+.quiz-card {
+    border: 2px solid var(--color-border) ;
+    background-color: var(--card) !important;
     border-radius: 12px;
     padding: 1.5rem;
     max-width: 600px;
@@ -32,6 +33,7 @@
 
 /* About Me Section */
 .profile__headline{
+    color: var(--color-text-dark);
     text-align: center;
     font-size: 16px;
     margin-bottom: 12px;
@@ -76,9 +78,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: var(--color-nav-bg);
+    background-color: var(--color-toggle-bg);
     border-radius: 10px;
     border: 1px solid var(--color-border);
+    color: var(--color-text-dark);
 }
 
 /* Toggle Switch */
@@ -86,30 +89,36 @@
     position: relative;
     width: 50px;
     height: 28px;
-    background-color: var(--color-nav-bg-checked);
+    background-color: var(--color-toggle-checked);
     border-radius: 14px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     border: none;
     padding: 0;
 }
 
-.toggle__switch.active {
-    background-color: var(--color-primary);
+.toggle__switch[data-state="on"] {
+    background-color: var(--color-toggle-primary);
 }
 
+/* Schieber-Kreis */
 .toggle__switch::after {
     content: '';
     position: absolute;
     width: 24px;
     height: 24px;
-    background-color: var(--color-nav-bg);
     border-radius: 50%;
+    background: var(--color-toggle-bg);
     top: 2px;
     left: 2px;
-    transition: left 0.3s ease;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.toggle__switch.active::after {
-    left: 24px;
+.toggle__switch[data-state="on"]::after {
+    transform: translateX(22px);  /* Rechts */
+}
+
+.h2 {
+    color: var( --color-text-dark);
 }
