@@ -20,6 +20,9 @@
     --color-toggle-primary: #5b9ef5;    /* ON-Zustand */
     --color-toggle-bg: #d4e5ff;         /* OFF-Zustand */
     --color-toggle-checked: #2e5fa8;    /* Stats etc. */
+    --warning-high: #dc2626;
+    --warning-medium: #eab308;
+    --warning-low: #22c55e;
 }
 
 .dark {
@@ -38,6 +41,9 @@
     --color-toggle-primary: #60A5FA;
     --color-toggle-bg: #1E40AF;
     --color-toggle-checked: #1E3A8A;
+    --warning-high: #f87171;    /* Hellere Rot-Töne */
+    --warning-medium: #facc15;
+    --warning-low: #4ade80;
 }
 
 body {
