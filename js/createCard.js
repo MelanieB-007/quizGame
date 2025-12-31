@@ -2,6 +2,11 @@ for (const navLink of nav) {
     createNav(navLink);
 }
 
+const getWarningColor = (charsLeft) =>
+    charsLeft <= 10 ? 'var(--warning-high)'
+        : charsLeft <= 30 ? 'var(--warning-medium)'
+            : 'var(--warning-low)';
+
 const form = document.querySelector(('[data-js="form"]'));
 form.reset();
 
@@ -26,24 +31,18 @@ form.addEventListener("submit", (event) => {
 
 form.addEventListener("reset", (event) =>{
    event.target.reset();
+   const allCounter = event.target.querySelectorAll('.characters--left');
+
+   allCounter.forEach(counter => {
+       counter.textContent = `150 characters left`;
+       counter.style.color = getWarningColor(150);
+   });
 });
 
 document.addEventListener('input', (event) => {
-    const input = event.target.matches(
-        '[data-js="question"], ' +
-        '[data-js="answer"], ' +
-        '[data-js="possibleAnswer1"], ' +
-        '[data-js="possibleAnswer2"], ' +
-        '[data-js="possibleAnswer3"], ' +
-        '[data-js="possibleAnswer4"]')
+    const input = event.target.matches('[data-js*="possibleAnswer"],[data-js="question"],[data-js="answer"]')
         ? event.target
-        : event.target.closest(
-            '[data-js="question"], ' +
-            '[data-js="answer"], ' +
-            '[data-js="possibleAnswer1"], ' +
-            '[data-js="possibleAnswer2"], ' +
-            '[data-js="possibleAnswer3"], ' +
-            '[data-js="possibleAnswer4"]');
+        : event.target.closest('[data-js*="possibleAnswer"],[data-js="question"],[data-js="answer"]');
 
     if (!input) return;
 
@@ -53,12 +52,5 @@ document.addEventListener('input', (event) => {
 
     const counter = input.parentElement.querySelector('.characters--left');
     counter.textContent = `${charactersLeft} characters left`;
-
-    if (charactersLeft <= 10) {
-        counter.style.color = '#dc2626';
-    } else if (charactersLeft <= 30) {
-        counter.style.color = '#eab308';
-    } else {
-        counter.style.color = '#22c55e';
-    }
+    counter.style.color = getWarningColor(charactersLeft);
 });
