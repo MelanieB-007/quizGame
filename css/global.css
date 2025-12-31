@@ -16,19 +16,37 @@
     --color-text-dark: #333;            /* Text Nav */
     --color-border: #b3d9ff;            /* Border */
     --color-shadow: rgba(0, 0, 0, 0.1);
+    --card: white;
+    --color-toggle-primary: #5b9ef5;    /* ON-Zustand */
+    --color-toggle-bg: #d4e5ff;         /* OFF-Zustand */
+    --color-toggle-checked: #2e5fa8;    /* Stats etc. */
+}
+
+.dark {
+    --color-primary: #1E40AF;
+    --color-primary-hover: #3B82F6;
+    --color-nav-bg: #1E40AF;
+    --color-nav-bg-checked: #1E3A8A;
+    --color-text-light: #60A5FA;
+    --color-text-dark: #60A5FA;
+    --color-border: #60A5FA;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+    --bg-primary: #0D47A1;
+    --bg-card: rgba(30, 64, 175, 0.9);
+    --text-primary: #E3F2FD;
+    --card: #1E40AF;
+    --color-toggle-primary: #60A5FA;
+    --color-toggle-bg: #1E40AF;
+    --color-toggle-checked: #1E3A8A;
 }
 
 body {
+    background-color: var(--color-text-light);
     display: flex;
     flex-direction: column;
     padding-top: 70px;                  /* Platz für Header */
     padding-bottom: 70px;               /* Platz für Navi */
     min-height: 100vh;
-}
-
-body.dark {
-    background-color: var(--color-text-dark);
-    color: var(--color-text-dark);
 }
 
 .main {
