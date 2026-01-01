@@ -68,6 +68,7 @@ document.addEventListener("click", (event) => {
                         button.classList.add("button--notCorrect");
                     }
                 }
+                button.disabled = true;
             });
 
             showButton.dataset.visible = "true";
