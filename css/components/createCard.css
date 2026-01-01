@@ -17,7 +17,7 @@
 .quiz-card__fieldset {
     padding: 10px;
     border-radius: 12px;
-    color: var(--color-primary);
+    color: var(--fieldset);
     border: 2px solid var(--color-border);
 }
 

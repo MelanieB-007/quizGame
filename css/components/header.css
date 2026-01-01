@@ -11,7 +11,7 @@
     justify-content: center !important;
     background: linear-gradient(to bottom,
     #5b9ef5 0%, #87CEEB 50%, #B0E0E6 100%) !important;  /* ← Gradient priorisieren */
-    box-shadow: 0 4px 6px var(--color-shadow);
+    box-shadow: 0 4px 6px var(--box-shadow);
 }
 
 /* EIN Overlay (kein Doppel!) */

@@ -3,9 +3,9 @@ for (const navLink of nav) {
 }
 
 const getWarningColor = (charsLeft) =>
-    charsLeft <= 10 ? 'var(--warning-high)'
-        : charsLeft <= 30 ? 'var(--warning-medium)'
-            : 'var(--warning-low)';
+    charsLeft <= 10 ? 'var(--counter-warning-high)'
+        : charsLeft <= 30 ? 'var(--counter-warning-medium)'
+            : 'var(--counter-warning-low)';
 
 const form = document.querySelector(('[data-js="form"]'));
 form.reset();

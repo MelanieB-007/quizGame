@@ -1,3 +1,23 @@
+const bodyElement = document.querySelector('[data-js="body"]');
+function initDarkMode() {
+    const savedDarkMode = localStorage.getItem("darkMode");
+    const isDark = savedDarkMode === "true";
+
+    bodyElement.classList.toggle("dark", isDark);
+    // Button-State nur falls Toggle auf index vorhanden (optional)
+    const toggleBtn = document.querySelector('[data-js="toggle-button"]');
+    if (toggleBtn) {
+        toggleBtn.dataset.state = isDark ? "on" : "off";
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initDarkMode);
+} else {
+    initDarkMode();
+}
+
+
 function createSection(
     {classList, ariaLabeledBy} = {}) {
     const section = document.createElement("section");

@@ -9,7 +9,7 @@
     margin: 30px auto;
     position: relative;
     overflow: visible;
-    box-shadow: 0 2px 8px var(--color-shadow);
+    box-shadow: 0 2px 8px var(--box-shadow);
 }
 
 .question__content {
@@ -19,7 +19,7 @@
 
 .question__text {
     width: auto;
-    color: var(--color-text-dark);
+    color: var(--text);
 }
 
 .question__image {
@@ -27,7 +27,7 @@
     flex-shrink: 0;
     width: 150px;
     height: 150px;
-    border: 2pt solid var(--color-primary);
+    border: 2pt solid var(--button-primary);
     border-radius: 12px;
 }
 

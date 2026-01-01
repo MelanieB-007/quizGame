@@ -4,12 +4,18 @@
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    background-color: var(--color-primary);
+    background-color: var(--button-primary);
     transition: all 0.3s ease;
 }
 
+.button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.35);
+    filter: brightness(1.05);
+}
+
 .button:active {
-    background-color: var(--color-primary-hover);
+    background-color: var(--button-primary-hover);
     transform: scale(0.98);
 }
 
@@ -20,14 +26,13 @@ button:disabled {
 .button--text {
     display: inline-block;
     min-width: 150px;
-    color: var(--color-text-light);
-    background-color: var(--color-primary-hover);
-    transform: scale(0.98);
+    color: var( --button-text);
     font-size: 0.8rem;
+    transition: transform 0.1s ease, background-color 0.1s ease;
 }
 
 .button--text:active {
-    background-color: var(--color-primary-hover);
+    background-color: var(--button-primary-hover);
     transform: scale(0.98);
 }
 
@@ -38,16 +43,34 @@ button:disabled {
 }
 
 .button--correct {
-    background: linear-gradient(145deg, #22c55e, #16a34a);
-    border-color: #16a34a;
+    background: var(--button-card-answer-correct);
+    border-color: var(--button-card-answer-correct-border);
+}
+
+.button--correct:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.35);
+    filter: brightness(1.05);
 }
 
 .button--notCorrect {
-    background: linear-gradient(145deg, #dc2626, #ea580c);
-    border-color: #f97316;
+    background: var(--button-card-answer-notCorrect);
+    border-color: var(--button-card-answer-notCorrect-border);
+}
+
+.button--notCorrect:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.35);
+    filter: brightness(1.05);
 }
 
 .button--selected {
-    background: linear-gradient(145deg, #1e3a8a, #1e40af);
-    border-color: #3730a3;
+    background: var(--button-card-answer-selected);
+    border-color: var(--button-card-answer-selected-border);
+}
+
+.button--selected:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.35);
+    filter: brightness(1.08);
 }

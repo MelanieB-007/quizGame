@@ -89,7 +89,7 @@ document.addEventListener("click", (event) => {
 function createCard(card) {
     const main = document.querySelector("main");
     const section = createSection({
-        classList: ["question__card"],
+        classList: ["question__card", "quiz-card"],
         ariaLabeledBy: card.id
     });
 
@@ -124,7 +124,7 @@ function createDivBookmark(classList, bookmarked){
     const div = createDiv({classList:classList});
 
     const button = createButton({
-        classList: ["button", "button__bookmark"],
+        classList: ["button__bookmark"],
         ariaLabel: "Toggle bookmark",
         dataJs: "button__bookmark"
     });
