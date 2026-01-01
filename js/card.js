@@ -80,6 +80,7 @@ document.addEventListener("click", (event) => {
                     button.classList.remove("button--selected", "button--correct", "button--notCorrect");
                     button.style.opacity = '1';
                 }
+                button.disabled = false;
             });
             showButton.dataset.visible = "false";
         }
