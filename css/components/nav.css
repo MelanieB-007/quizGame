@@ -8,7 +8,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    background-color: var(--color-nav-bg);
+    background: var(--nav-gradient) !important;
+    box-shadow: 0 -4px 6px var(--color-shadow);  /* Schatten oben */
     padding: 0.6rem;
 }
 

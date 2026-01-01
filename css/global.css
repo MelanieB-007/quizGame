@@ -8,7 +8,7 @@
 }
 
 :root {
-    --color-primary: #5b9ef5;           /* Header & Button */
+    --color-primary: #5b9ef5;           /* Button */
     --color-primary-hover: #4a8fe7;     /* Button Hover */
     --color-nav-bg: #d4e5ff;            /* Nav Background */
     --color-nav-bg-checked: #2e5fa8;    /* Nav Background checked */
@@ -23,13 +23,16 @@
     --warning-high: #dc2626;
     --warning-medium: #eab308;
     --warning-low: #22c55e;
+    --header-gradient: linear-gradient(to bottom, #5b9ef5 0%, #87CEEB 50%, #B0E0E6 100%);
+    --nav-gradient: linear-gradient(to top, #5b9ef5 0%, #87CEEB 50%, #B0E0E6 100%);
+    --overlay-light: rgba(255, 255, 255, 0.15);
 }
 
 .dark {
     --color-primary: #1E40AF;
     --color-primary-hover: #3B82F6;
     --color-nav-bg: #1E40AF;
-    --color-nav-bg-checked: #1E3A8A;
+    --color-nav-bg-checked: #5b9ef5;
     --color-text-light: #60A5FA;
     --color-text-dark: #60A5FA;
     --color-border: #60A5FA;
@@ -41,16 +44,19 @@
     --color-toggle-primary: #60A5FA;
     --color-toggle-bg: #1E40AF;
     --color-toggle-checked: #1E3A8A;
-    --warning-high: #f87171;    /* Hellere Rot-Töne */
+    --warning-high: #f87171;
     --warning-medium: #facc15;
     --warning-low: #4ade80;
+    --header-gradient: linear-gradient(to bottom, #2e5fa8 0%, #1e3a5f 60%, #0f172a 100%);
+    --nav-gradient: linear-gradient(to top, #2e5fa8 0%, #1e3a5f 60%, #0f172a 100%);
+    --overlay-light: rgba(0, 0, 0, 0.3);
 }
 
 body {
     background-color: var(--color-text-light);
     display: flex;
     flex-direction: column;
-    padding-top: 70px;                  /* Platz für Header */
+    padding-top: 150px;                  /* Platz für Header */
     padding-bottom: 70px;               /* Platz für Navi */
     min-height: 100vh;
 }
