@@ -8,49 +8,118 @@
 }
 
 :root {
-    --color-primary: #5b9ef5;           /* Header & Button */
-    --color-primary-hover: #4a8fe7;     /* Button Hover */
-    --color-nav-bg: #d4e5ff;            /* Nav Background */
-    --color-nav-bg-checked: #2e5fa8;    /* Nav Background checked */
-    --color-text-light: white;          /* Text Header */
-    --color-text-dark: #333;            /* Text Nav */
-    --color-border: #b3d9ff;            /* Border */
-    --color-shadow: rgba(0, 0, 0, 0.1);
-    --card: white;
+    /* general */
+    --color-border: #b3d9ff;
+    --box-shadow: rgba(0, 0, 0, 0.1);
+    --fieldset: #5b9ef5;
+    --text: #333;
+
+    /* header */
+    --header-gradient: linear-gradient(
+            to bottom,
+            #5b9ef5 0%,
+            #87CEEB 50%,
+            #B0E0E6 100%);
+
+    /* Navigation */
+    --nav-bg: #5b9ef5;
+    --nav-bg-checked: #2e5fa8;
+    --nav-bg-hover: #4a8fe7;
+    --nav-gradient: linear-gradient(
+            to top,
+            #5b9ef5 0%,
+            #87CEEB 50%,
+            #B0E0E6 100%);
+
+    /* div for section */
+    --div-section: #ffffff;
+
+    /* Buttons */
+    --button-primary: #5b9ef5;
+    --button-primary-hover: #4a8fe7;
+    --button-text: white;
+
+    /* Buttons in Card */
+    --button-card-answer-correct: linear-gradient(145deg, #22c55e, #16a34a);
+    --button-card-answer-correct-border: #16a34a;
+    --button-card-answer-notCorrect: linear-gradient(145deg, #dc2626, #ea580c);
+    --button-card-answer-notCorrect-border: #f97316;
+    --button-card-answer-selected: linear-gradient(145deg, #1e3a8a, #1e40af);
+    --button-card-answer-selected-border: #3730a3;
+
+    /* Toggle */
     --color-toggle-primary: #5b9ef5;    /* ON-Zustand */
     --color-toggle-bg: #d4e5ff;         /* OFF-Zustand */
     --color-toggle-checked: #2e5fa8;    /* Stats etc. */
-    --warning-high: #dc2626;
-    --warning-medium: #eab308;
-    --warning-low: #22c55e;
+
+    /* Counter */
+    --counter-warning-high: #dc2626;
+    --counter-warning-medium: #eab308;
+    --counter-warning-low: #22c55e;
+
+    /* Buttons profile page for statistic */
+    --profile-stat-bg: #d4e5ff;
 }
 
 .dark {
-    --color-primary: #1E40AF;
-    --color-primary-hover: #3B82F6;
-    --color-nav-bg: #1E40AF;
-    --color-nav-bg-checked: #1E3A8A;
-    --color-text-light: #60A5FA;
-    --color-text-dark: #60A5FA;
+    /* general */
     --color-border: #60A5FA;
-    --color-shadow: rgba(0, 0, 0, 0.3);
-    --bg-primary: #0D47A1;
-    --bg-card: rgba(30, 64, 175, 0.9);
-    --text-primary: #E3F2FD;
-    --card: #1E40AF;
+    --box-shadow: rgba(0, 0, 0, 0.3);
+    --fieldset: #60A5FA;
+    --text: #60A5FA;
+
+    /* header */
+    --header-gradient: linear-gradient(
+            to bottom,
+            #2e5fa8 0%,
+            #1e3a5f 60%,
+            #0f172a 100%);
+
+    /* Navigation */
+    --nav-bg: #1E40AF;
+    --nav-bg-checked: #5b9ef5;
+    --nav-bg-hover: #3B82F6;
+    --nav-gradient: linear-gradient(
+            to top,
+            #2e5fa8 0%,
+            #1e3a5f 60%,
+            #0f172a 100%);
+
+    /* div for section */
+    --div-section: #1E40AF;
+
+    /* Buttons */
+    --button-primary: #3B82F6;;
+    --button-primary-hover: #60A5FA;
+    --button-text: #E3F2FD;
+
+    /* Buttons in Card */
+    --button-card-answer-correct: linear-gradient(145deg, #22c55e, #16a34a);
+    --button-card-answer-correct-border: #16a34a;
+    --button-card-answer-notCorrect: linear-gradient(145deg, #dc2626, #ea580c);
+    --button-card-answer-notCorrect-border: #f97316;
+    --button-card-answer-selected: linear-gradient(145deg, #020617, #0f172a);
+    --button-card-answer-selected-border: #1e293b;
+
+    /* Toggle */
     --color-toggle-primary: #60A5FA;
     --color-toggle-bg: #1E40AF;
     --color-toggle-checked: #1E3A8A;
-    --warning-high: #f87171;    /* Hellere Rot-Töne */
-    --warning-medium: #facc15;
-    --warning-low: #4ade80;
+
+    /* Counter */
+    --counter-warning-high: #f87171;
+    --counter-warning-medium: #eab308;
+    --counter-warning-low: #4ade80;
+
+    /* Buttons profile page for statistic */
+    --profile-stat-bg: #1E40AF;
 }
 
 body {
-    background-color: var(--color-text-light);
+    background-color: var(--div-section);
     display: flex;
     flex-direction: column;
-    padding-top: 70px;                  /* Platz für Header */
+    padding-top: 150px;                  /* Platz für Header */
     padding-bottom: 70px;               /* Platz für Navi */
     min-height: 100vh;
 }

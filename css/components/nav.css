@@ -8,7 +8,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    background-color: var(--color-nav-bg);
+    background: var(--nav-gradient) !important;
+    box-shadow: 0 -4px 6px var(--box-shadow);  /* Schatten oben */
     padding: 0.6rem;
 }
 
@@ -22,12 +23,12 @@
     min-width: auto;
     border-radius: 12px;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px var(--color-shadow);
+    box-shadow: 0 2px 4px var(--box-shadow);
     cursor: pointer;
 }
 
 .nav__link:hover {
-    background-color: var(--color-primary-hover);
+    background-color: var(--nav-bg-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -37,7 +38,7 @@
 }
 
 .nav__link:focus-visible {
-    outline: 3px solid var(--color-primary);
+    outline: 3px solid var(--nav-bg);
     outline-offset: 2px;
 }
 
@@ -54,9 +55,9 @@
 }
 
 .nav__link__checked {
-    background-color: var(--color-nav-bg-checked);
+    background-color: var(--nav-bg-checked);
 }
 
 .nav__link__notchecked {
-    background-color: var(--color-primary);
+    background-color: var(--nav-bg);
 }

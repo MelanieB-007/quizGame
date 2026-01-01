@@ -4,6 +4,8 @@
     height: 50px;
     z-index: 0;
     transition: opacity 0.3s ease;
+    border: none;
+    outline: none;
 }
 
 .bookmark__image--visible {
@@ -23,6 +25,8 @@
     height: 50px;
     padding: 0;
     background: none;
+    border: none;
+    outline: none;
     z-index: 0;
 }
 
@@ -31,6 +35,6 @@
 }
 
 .button__bookmark:focus-visible {
-    outline: 3px solid var(--color-primary);
+    outline: 3px solid var(--button-primary);
     outline-offset: 2px;
 }

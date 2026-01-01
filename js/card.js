@@ -4,14 +4,20 @@ document.addEventListener("click", (event) => {
         const img = button.querySelector('.bookmark__image');
 
         const isBookmarked = button.toggleAttribute('data-bookmarked');
+        const isBookmarkPage = location.pathname.includes('bookmarks.html');
+        const card = button.closest('.question__card');
 
-        // Icon je nach State tauschen
-        img.src = isBookmarked
-            ? "./assets/icons/bookmark_checked.png"
-            : "./assets/icons/bookmark_plus.png";
-        img.alt = isBookmarked
-            ? "bookmark checked"
-            : "add to bookmarks";
+        if(isBookmarkPage){
+            card.remove();
+        } else {
+            // Icon je nach State tauschen
+            img.src = isBookmarked
+                ? "./assets/icons/bookmark_checked.png"
+                : "./assets/icons/bookmark_plus.png";
+            img.alt = isBookmarked
+                ? "bookmark checked"
+                : "add to bookmarks";
+        }
     }
 
     if(event.target.closest('[data-js="buttonAnswers"]')){
@@ -74,6 +80,7 @@ document.addEventListener("click", (event) => {
                     button.classList.remove("button--selected", "button--correct", "button--notCorrect");
                     button.style.opacity = '1';
                 }
+                button.disabled = false;
             });
             showButton.dataset.visible = "false";
         }
@@ -83,7 +90,7 @@ document.addEventListener("click", (event) => {
 function createCard(card) {
     const main = document.querySelector("main");
     const section = createSection({
-        classList: ["question__card"],
+        classList: ["question__card", "quiz-card"],
         ariaLabeledBy: card.id
     });
 
@@ -118,7 +125,7 @@ function createDivBookmark(classList, bookmarked){
     const div = createDiv({classList:classList});
 
     const button = createButton({
-        classList: ["button", "button__bookmark"],
+        classList: ["button__bookmark"],
         ariaLabel: "Toggle bookmark",
         dataJs: "button__bookmark"
     });
