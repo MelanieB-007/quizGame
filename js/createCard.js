@@ -11,14 +11,6 @@ const getWarningColor = (charsLeft) =>
 
 const form = document.querySelector("[data-js='form']");
 
-form.addEventListener("reset", (event) => {
-    event.target.reset();
-    const allCounter = event.target.querySelectorAll('.characters--left');
-    allCounter.forEach(counter => {
-        counter.textContent = `150 characters left`;
-        counter.style.color = getWarningColor(150);
-    });
-});
 document.addEventListener('input', (event) => {
     const input = event.target.matches('[data-js*="possibleAnswer"],[data-js="question"],[data-js="answer"]')
         ? event.target
@@ -98,6 +90,27 @@ function initFileUpload() {
         renderCards();
 
         form.reset();
+    });
+
+    form.addEventListener("reset", (event) => {
+        event.preventDefault();
+
+        const textInputs = form.querySelectorAll('input[type="text"]');
+        textInputs.forEach(input => input.value = '');
+
+
+        // File-Upload reset
+        const fileNameSpan = document.querySelector('[data-js="file-name"]');
+        const previewDiv = document.querySelector('[data-js="image-preview"]');
+        fileNameSpan.textContent = 'No image selected';
+        previewDiv.innerHTML = '';
+
+        // Counters reset
+        const allCounters = form.querySelectorAll('.characters--left');
+        allCounters.forEach(counter => {
+            counter.textContent = '150 characters left';
+            counter.style.color = getWarningColor(150);
+        });
     });
 }
 
