@@ -51,7 +51,7 @@ function initFileUpload() {
             const reader = new FileReader();
 
             reader.onload = (ev) => {
-                previewImage.src = e.target.result;
+                previewImage.src = ev.target.result;
                 previewImage.alt = file.name;
                 previewImage.style.maxWidth = '200px';
                 previewImage.style.display = 'block';
