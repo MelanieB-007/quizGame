@@ -114,12 +114,14 @@ function createCard(card) {
 
     divContent.appendChild(createButtonAnswers(card));
 
-    section.appendChild(
-        createImage({
-            icon: card.imageAnswer ? card.imageAnswer : "images/quizwindow.jpg",
-            alt: card.answer,
-            classList: ["question__image"]
-    }));
+    // ✅ UPLOAD-BILD (Base64) or standard
+
+    const imageElement = createImage({
+        icon: card.imageSrc || card.imageAnswer || "images/quizwindow.jpg",  // Priorität!
+        alt: card.answer,
+        classList: ["question__image"]
+    });
+    section.appendChild(imageElement);
 }
 
 function createDivBookmark(classList, bookmarked){

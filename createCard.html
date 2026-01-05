@@ -26,8 +26,7 @@
             <div class="quiz-card">
                 <form
                         data-js="form"
-                        class="quiz-card__form"
-                        novalidate>
+                        class="quiz-card__form">
                     <div class="form-group">
                         <label
                                 for="question"
@@ -84,6 +83,7 @@
                             <input
                                     id="possibleAnswer1"
                                     data-js="possibleAnswer1"
+                                    name="possibleAnswer1"
                                     type="text"
                                     class="form-control"
                                     placeholder="Insert your first animal ..."
@@ -103,6 +103,7 @@
                             <input
                                     id="possibleAnswer2"
                                     data-js="possibleAnswer2"
+                                    name="possibleAnswer2"
                                     type="text"
                                     class="form-control"
                                     placeholder="Insert your second animal ..."
@@ -122,6 +123,7 @@
                             <input
                                     id="possibleAnswer3"
                                     data-js="possibleAnswer3"
+                                    name="possibleAnswer3"
                                     type="text"
                                     class="form-control"
                                     placeholder="Insert your third animal ..."
@@ -141,6 +143,7 @@
                             <input
                                     id="possibleAnswer4"
                                     data-js="possibleAnswer4"
+                                    name="possibleAnswer4"
                                     type="text"
                                     class="form-control"
                                     placeholder="Insert your forth animal ..."
@@ -151,21 +154,39 @@
                                 150 characters left
                             </div>
                         </div>
-                        <div class="quiz-card__buttons">
-                            <button
-                                    type="submit"
-                                    aria-label="Create quiz card"
-                                    class="button button--text">
-                                Submit
-                            </button>
-                            <button
-                                    type="reset"
-                                    aria-label="Reset form"
-                                    class="button button--text">
-                                Reset
-                            </button>
-                        </div>
                     </fieldset>
+                    <div class="form-group">
+                        <label for="imageUpload" class="form-label">Image upload:</label>
+                        <div class="custom-file-upload" data-js="custom-upload">
+                            <input
+                                    id="imageUpload"
+                                    name="imageUpload"
+                                    type="file"
+                                    accept="image/*"
+                                    class="file-input"
+                                    data-js="file-input"
+                                    hidden />
+                            <label for="imageUpload" class="upload-btn">
+                                📁 Select an image
+                            </label>
+                            <span class="file-name" data-js="file-name">No image selected</span>
+                            <div class="image-preview" data-js="image-preview"></div>
+                        </div>
+                    </div>
+                    <div class="quiz-card__buttons" >
+                        <button
+                                type="submit"
+                                aria-label="Create quiz card"
+                                class="button button--text">
+                            Submit
+                        </button>
+                        <button
+                                type="reset"
+                                aria-label="Reset form"
+                                class="button button--text">
+                            Reset
+                        </button>
+                    </div>
                 </form>
             </div>
         </main>
