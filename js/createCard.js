@@ -2,14 +2,15 @@ for (const navLink of nav) {
     createNav(navLink);
 }
 
+let cards = [];
+
 const getWarningColor = (charsLeft) =>
     charsLeft <= 10 ? 'var(--counter-warning-high)'
         : charsLeft <= 30 ? 'var(--counter-warning-medium)'
             : 'var(--counter-warning-low)';
 
-const form = document.querySelector("[data-js='form']");  // ✅ Fix
+const form = document.querySelector("[data-js='form']");
 
-// Event-Listener (KEIN form.reset() hier!)
 form.addEventListener("reset", (event) => {
     event.target.reset();
     const allCounter = event.target.querySelectorAll('.characters--left');
@@ -36,40 +37,51 @@ document.addEventListener('input', (event) => {
 
 function initFileUpload() {
     const form = document.querySelector('[data-js="form"]');
-    const fileInput = document.getElementById('imageUpload');  //
+    const fileInput = document.getElementById('imageUpload');
     const fileNameSpan = document.querySelector('[data-js="file-name"]');
     const previewDiv = document.querySelector('[data-js="image-preview"]');
+
+    const previewImage = previewDiv.querySelector('img') ||
+        document.createElement('img');
 
     fileInput.addEventListener('change', (e) => {
         const file = e.target.files[0];
         if (file) {
-            if (file.size > 2 * 1024 * 1024) {
-                alert('Image too big! Max. 2MB.');
-                fileInput.value = '';
-                return;
-            }
-            if (!file.type.startsWith('image/')) {
-                alert('Only images allowed!');
-                fileInput.value = '';
-                return;
-            }
             fileNameSpan.textContent = file.name;
             const reader = new FileReader();
-            reader.onload = (ev) => previewDiv.innerHTML = `<img src="${ev.target.result}" alt="${file.name}">`;
+
+            reader.onload = (ev) => {
+                previewImage.src = e.target.result;
+                previewImage.alt = file.name;
+                previewImage.style.maxWidth = '200px';
+                previewImage.style.display = 'block';
+                if (!previewDiv.contains(previewImage)) {
+                    previewDiv.appendChild(previewImage);
+                }
+            };
+
             reader.readAsDataURL(file);
         } else {
             fileNameSpan.textContent = 'No file selected';
-            previewDiv.innerHTML = '';
+            previewImage.style.display = 'none';
         }
     });
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        if (fileInput.hasAttribute('required') && !fileInput.files[0]) {
-            alert('Image required!');
-            return;
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formElements = event.target.elements;
+
+        // Base64-Image
+        const file = formElements.imageUpload.files[0];
+        let imageSrc = 'images/quizwindow.jpg';
+        if (file) {
+            imageSrc = await new Promise(resolve => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result);
+                reader.readAsDataURL(file);
+            });
         }
-        const formElements = e.target.elements;
+
         const card = {
             question: formElements.question.value,
             answer: formElements.answer.value,
@@ -78,24 +90,31 @@ function initFileUpload() {
                 formElements.possibleAnswer2.value,
                 formElements.possibleAnswer3.value,
                 formElements.possibleAnswer4.value
-            ],
-            imagePath: formElements.imageUpload.files[0]?.name || ''  // ✅ Name!
+            ].filter(ans => ans.trim()),
+            imageSrc: imageSrc
         };
-        createCard(card);
+
+        cards.push(card);
+        renderCards();
+
         form.reset();
-
-        // File + Custom-Elemente zurücksetzen
-        fileInput.value = '';
-        fileNameSpan.textContent = 'No file selected';
-        previewDiv.innerHTML = '';
-
-        // Counters resetten
-        const allCounters = form.querySelectorAll('.characters--left');
-        allCounters.forEach(counter => {
-            counter.textContent = '150 characters left';
-            counter.style.color = getWarningColor(150);
-        });
     });
 }
 
-initFileUpload();
+function renderCards() {
+    const main = document.querySelector("main");
+
+    // 1. ALLE alten Cards löschen
+    const oldCards = main.querySelectorAll('.question__card');
+    oldCards.forEach(card => card.remove());
+
+    // 2. cards[] komplett neu rendern
+    cards.forEach(cardObj => {
+        createCard(cardObj);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initFileUpload();
+    renderCards();
+});

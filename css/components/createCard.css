@@ -109,7 +109,7 @@
     max-height: 140px;
     border-radius: 8px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--image_preview);
 }
 
 .image-preview img {
@@ -126,4 +126,12 @@
     height: 100%;
     cursor: pointer;
     z-index: 2;
+}
+
+.card-image {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px var(--box-shadow);
 }

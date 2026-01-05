@@ -50,8 +50,15 @@ function createButton(
 function createImage(
     {icon = "", alt = "", classList= []} = {}){
     const image = document.createElement("img");
+
+    // ✅ Base64 CHECK!
+    if (icon.startsWith('data:')) {
+        image.src = icon;  // Base64
+    } else {
+        image.src = `./assets/${icon}`;
+    }
+
     image.classList.add(...classList);
-    image.src = `./assets/${icon}`;
     image.alt = alt;
     image.setAttribute("title", alt);
 

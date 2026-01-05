@@ -59,6 +59,10 @@
 
     /* Buttons profile page for statistic */
     --profile-stat-bg: #d4e5ff;
+
+
+    /* images */
+    --image_preview: rgba(255, 255, 255, 0.1);
 }
 
 .dark {
